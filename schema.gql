@@ -1,0 +1,26 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type ProductDetails {
+  name: String!
+  description: String!
+}
+
+type Product {
+  code: String!
+  name: String!
+  available: Boolean!
+  visible: Boolean!
+  details: ProductDetails!
+  fullPriceInCents: String!
+  salePriceInCents: String!
+  rating: Float!
+  image: String!
+  stockAvailable: Boolean!
+}
+
+type Query {
+  products: [Product!]!
+  product(code: String!): Product
+}
